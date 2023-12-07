@@ -13,7 +13,7 @@ type Primitive interface {
 func Create[T Primitive](row, col int) NomSquare[T] {
 	arr := make([][]T, row)
 	for i := range arr {
-		arr[i] = make([]T, row)
+		arr[i] = make([]T, col)
 	}
 	return NomSquare[T]{rowLen: col, colLen: row, array: arr}
 }
